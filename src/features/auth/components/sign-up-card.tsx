@@ -1,3 +1,5 @@
+"use client";
+
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
@@ -111,7 +113,7 @@ export const SignUpCard = () => {
               control={form.control}
             ></FormField>
             <Button disabled={false} size="lg" className="w-full">
-              Sign In
+              Register
             </Button>
           </form>
         </Form>
