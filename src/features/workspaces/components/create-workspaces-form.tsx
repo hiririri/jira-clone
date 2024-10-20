@@ -40,7 +40,12 @@ export const CreateWorkspacesForm = ({
   });
 
   const onSubmit = (values: z.infer<typeof createWorkspacesSchema>) => {
-    mutate({ json: values });
+    const finalValues = {
+      ...values,
+      image: values.imageUrl instanceof File ? values.imageUrl : "",
+    };
+
+    mutate({ form: finalValues });
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
